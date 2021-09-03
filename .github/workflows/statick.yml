@@ -84,10 +84,6 @@ jobs:
           sudo npm install -g npm-groovy-lint
           rm nodesource_setup.sh
 
-      - name: Test with mypy
-        run: |
-          mypy --ignore-missing-imports --strict statick statick_tool/
-
       - name: Statick markdown
         if: matrix.os == 'ubuntu-18.04' || matrix.os == 'ubuntu-20.04'
         run: |
